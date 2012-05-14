@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tittle: MyString
+  post: MyText
+  owner: MyString
+  date: 2012-05-14
+
+two:
+  tittle: MyString
+  post: MyText
+  owner: MyString
+  date: 2012-05-14
