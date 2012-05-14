@@ -1,28 +1,21 @@
-<h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Tittle</th>
-    <th>Post</th>
-    <th>Owner</th>
-    <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<h1>Temas Publicados</h1>
+</br>
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.tittle %></td>
-    <td><%= post.post %></td>
-    <td><%= post.owner %></td>
-    <td><%= post.date %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+    <p id="notice">
+    	<%= link_to post.tittle, post %>
+		|
+    	<%= post.owner %>
+
+    </p>
+    <p>
+    	Hace <%= time_ago_in_words post.created_at %> 
+    </p>
+    <p>
+    	<%= truncate post.post %>
+    </p>
+
+<br />
 <% end %>
-</table>
 
 <br />
 
