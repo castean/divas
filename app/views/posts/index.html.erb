@@ -1,19 +1,25 @@
 <h1>Temas Publicados</h1>
 </br>
 <% @posts.each do |post| %>
-    <p id="notice">
-    	<%= link_to post.tittle, post %>
-		|
-    	<%= post.owner %>
-
-    </p>
-    <p>
-    	Hace <%= time_ago_in_words post.created_at %> 
-    </p>
-    <p>
-    	<%= truncate post.post %>
-    </p>
-
+<table>
+	<td>
+		<%= image_tag post.avatar.url(:thumb) %>
+	</td>
+	<td>
+	    <p id="notice">
+	    	<%= link_to post.tittle, post %>
+			|
+	    	<%= post.owner %>
+	
+	    </p>
+	    <p>
+	    	Hace <%= time_ago_in_words post.created_at %> 
+	    </p>
+	    <p>
+	    	<%= truncate post.post %>
+	    </p>
+    </td>
+</table>
 <br />
 <% end %>
 

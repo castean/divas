@@ -1,4 +1,7 @@
 Divas::Application.routes.draw do
+
+  get "user_sessions/new"
+
   get "comments/create"
 
   get "comments/destroy"
@@ -8,6 +11,9 @@ Divas::Application.routes.draw do
   end
 
   resources :users
+  resources :user_sessions
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,7 +64,7 @@ Divas::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'post#index'
+  root :to => 'posts#index'
 
   # See how all your routes lay out with "rake routes"
 
