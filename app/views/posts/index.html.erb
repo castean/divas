@@ -1,28 +1,34 @@
-<h1>Temas Publicados</h1>
-</br>
-<% @posts.each do |post| %>
-<table>
-	<td>
-		<%= image_tag post.avatar.url(:thumb) %>
-	</td>
-	<td>
-	    <p id="notice">
-	    	<%= link_to post.tittle, post %>
-			|
-	    	<%= post.owner %>
-	
-	    </p>
-	    <p>
-	    	Hace <%= time_ago_in_words post.created_at %> 
-	    </p>
-	    <p>
-	    	<%= truncate post.post %>
-	    </p>
-    </td>
-</table>
-<br />
-<% end %>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
+<div class="container">
+  <div class="row">
+    <div class="span8">
+    	<h1>Temas Publicados</h1>
+		</br>
+		<% @posts.each do |post| %>
+		<table class="table table-striped table-condensed">
+			<td>
+				<%= image_tag post.avatar.url(:thumb) %>
+			</td>
+			<td>
+			    <p id="notice">
+			    	<%= link_to post.tittle, post %>
+					|
+			    	<%= post.owner %>
+			    </p>
+			    <p>
+			    	Hace <%= time_ago_in_words post.created_at %> 
+			    </p>
+			    <p>
+			    	<%= truncate post.post %>
+			    </p>
+		    </td>
+		</table>
+		<% end %>
+		</br>
+		<%= link_to 'New Post', new_post_path, :class => 'btn' %>
+	</div>
+    <div class="span4">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
+    </div>
+  </div>
+</div>
