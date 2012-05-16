@@ -19,7 +19,7 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  #gem 'twitter-bootstrap-rails'
+  gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass', '2.0.0'
 end
 
@@ -29,7 +29,7 @@ gem "paperclip", "~> 3.0.3"
 gem 'authlogic'
 gem 'will_paginate'
 gem "cancan"
-
+gem 'less'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
