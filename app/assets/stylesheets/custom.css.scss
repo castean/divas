@@ -8,10 +8,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
-
 section {
   overflow: auto;
 }
@@ -28,11 +24,44 @@ textarea {
   margin-bottom: 10px;
 }
 
+
+/* header */
+
+#logo {
+  height: 110px;
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+/* body */
+
+body { 
+  background-image:url('fondo.png');
+  -moz-background-size:100% 100%; /* Firefox 3.6 */
+  background-size:100% 100%;
+  background-repeat:no-repeat; 
+  padding-top: 130px; }
+
+
 /* footer */
 
 footer {
+  background-color: #000000;
   margin-top: 45px;
   padding-top: 5px;
+  height: 64px; 
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
   a {
