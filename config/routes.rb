@@ -1,5 +1,7 @@
 Divas::Application.routes.draw do
 
+  resources :sponsors
+
   get "user_sessions/new"
 
   get "comments/create"

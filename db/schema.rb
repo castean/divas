@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120514204711) do
+ActiveRecord::Schema.define(:version => 20120516184851) do
 
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(:version => 20120514204711) do
     t.text     "post"
     t.string   "owner"
     t.date     "date"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.string   "name"
+    t.string   "route"
+    t.text     "info"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.string   "avatar_file_name"
