@@ -1,8 +1,14 @@
 Divas::Application.routes.draw do
 
+  get "homes/index"
+
+  resources :pages
+
   resources :events
 
   resources :sponsors
+  
+  resources :homes
 
   get "user_sessions/new"
 
