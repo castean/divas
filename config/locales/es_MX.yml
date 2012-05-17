@@ -207,4 +207,10 @@ es_MX:
       <<: *errors
   activerecord:
     errors:
-      <<: *errors
+      <<: *errors     
+  views:
+    pagination:
+      previous: "&lt; Anterior"
+      next: "Siguiente &gt;"
+      last: "Final"
+      first: "Inicio"
