@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+
     <div class="span8">
     	<h1>Temas Publicados</h1>
 		</br>
@@ -24,7 +25,10 @@
 		</table>
 		<% end %>
 		</br>
-		<%= link_to 'New Post', new_post_path, :class => 'btn' %>
+		<%= link_to 'New Post', new_post_path, :class => 'btn' %></br>
+		<div class="pager">
+			<%= paginate @posts %>
+		</div>
 	</div>
     <div class="span4">
     	<%= render 'layouts/sponsor' %>

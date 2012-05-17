@@ -28,7 +28,8 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem "paperclip", "~> 3.0.3"
 gem 'authlogic'
-gem 'will_paginate'
+#gem 'will_paginate', '~> 3.0'
+gem "kaminari"
 gem "cancan"
 gem 'event-calendar', :require => 'event_calendar'
 
