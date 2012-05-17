@@ -21,6 +21,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass', '2.0.0'
+  gem 'less'
 end
 
 gem 'jquery-rails'
@@ -29,7 +30,8 @@ gem "paperclip", "~> 3.0.3"
 gem 'authlogic'
 gem 'will_paginate'
 gem "cancan"
-gem 'less'
+gem 'event-calendar', :require => 'event_calendar'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

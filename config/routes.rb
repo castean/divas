@@ -1,5 +1,7 @@
 Divas::Application.routes.draw do
 
+  resources :events
+
   resources :sponsors
 
   get "user_sessions/new"
@@ -15,7 +17,7 @@ Divas::Application.routes.draw do
   resources :users
   resources :user_sessions
 
-
+  match '/calendar(/:year(/:month))' => 'events#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

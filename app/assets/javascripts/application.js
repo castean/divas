@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+$(function (){
+        $('#events_start_at').datepicker();
+});
 //= require_tree .
+
+

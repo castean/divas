@@ -3,10 +3,15 @@
 <head>
   <title>Divas</title>
   <%= render 'layouts/shim' %>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "application", :media => "all"%>
+  <%= javascript_include_tag "application"  %>
+  <%= stylesheet_link_tag    "/assets/css/custom-theme/jquery-ui-1.8.20.custom.css" %>
+  <%= javascript_include_tag "/assets/js/jquery-1.7.2.min.js", "/assets/js/jquery-ui-1.8.20.custom.min.js" %>
+  <%= stylesheet_link_tag "/stylesheets/event_calendar.css" %>
+  <%= javascript_include_tag "/javascripts/event_calendar.js" %>
   
+  
+  <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
