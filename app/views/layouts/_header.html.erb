@@ -4,7 +4,7 @@
       <%= link_to image_tag("logodivas.png", alt: "PaintBall Divas"), '#', id: "logo" %>
       <!--<%= link_to "sample app", '#', id: "logo" %>!-->
       <% paginanombre=Page.order("ordenp")%>
-      <nav class="nav">
+      <nav class="nav pull-right">
       	<% paginanombre.each do |titulo| %>	
 		<li>
 			<%= link_to titulo.name, titulo.routes %>
