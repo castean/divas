@@ -25,6 +25,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery_datepicker'
 gem 'therubyracer'
 gem "paperclip", "~> 3.0.3"
 gem 'authlogic'

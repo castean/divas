@@ -11,7 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
+
+//= require jquery-ui
+
 $(function (){
         $('#events_start_at').datepicker();
 });
