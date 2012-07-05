@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120517213726) do
+ActiveRecord::Schema.define(:version => 20120704234809) do
 
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(:version => 20120517213726) do
     t.string   "tittle"
     t.text     "info"
     t.date     "devent"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "name"
     t.datetime "start_at"
     t.datetime "end_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "pages", :force => true do |t|
@@ -68,11 +68,6 @@ ActiveRecord::Schema.define(:version => 20120517213726) do
     t.datetime "avatar_updated_at"
   end
 
-  create_table "user_sessions", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "users", :force => true do |t|
     t.string   "nick"
     t.string   "login",                                 :null => false
@@ -102,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20120517213726) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "password_confirmation"
+    t.text     "info"
   end
 
 end

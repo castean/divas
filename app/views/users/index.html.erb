@@ -1,29 +1,34 @@
 <div class="container">
   <div class="row">
-    <div class="span8">
-		<h1>Listing users</h1>
-		
+    <div class="span8"></br>
+		<tittle class ="tittle">Divas</tittle>
+		<% @users.each do |user| %>
 		<table>
 		  <tr>
-		    <th>Nick</th>
-		    <th></th>
-		    <th></th>
-		    <th></th>
-		  </tr>
-		
-		<% @users.each do |user| %>
-		  <tr>
-		    <td><%= user.nick %></td>
-		    <td><%= link_to 'Show', user %></td>
-		    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-		    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-		  </tr>
-		<% end %>
-		</table>
-		
-		<br />
-		
-		<%= link_to 'New User', new_user_path %>
+		  	<h1 class="fn"></h1>
+		  	<div id="page-wrap">
+		  		<%= image_tag user.avatar.url(:medium), :id => "pic" %>
+			    <td><h3><%= user.nick %></h3></br>
+			    <div id="objective">
+	            	<p>
+	            		<%= user.info%>
+	            	</p>
+	            </div></br>
+	            	<p>
+	  					<b>Fecha de Nacimiento:</b></br>	
+			    		<%= user.birthday.to_date%></br>
+			    	</p>
+			    	<p>
+			    		<b>Correo Electronico:</b></br>
+			    		<%= user.email%></br>
+			    	</p>
+			    <%= link_to 'Show', user %> |
+			    <%= link_to 'Edit', edit_user_path(user) %> |
+			    <%= link_to 'Destroy', user, confirm: '¿Esta usted seguro?', method: :delete %></br></br>
+			</tr>
+			<% end %>
+		</table><br />
+		<%= link_to 'New User', new_user_path, :class => "btn" %>
 	</div>
     <div class="span4">
     	<%= render 'layouts/sponsor' %>
