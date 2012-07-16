@@ -2,19 +2,22 @@
   <div class="navbar-inner">
     <div class="container">
       <%= link_to image_tag("logodivas.png", alt: "PaintBall Divas"), '#', id: "logo" %>
-      <!--<%= link_to "sample app", '#', id: "logo" %>!-->
       <% paginanombre=Page.order("ordenp")%>
+      
+      <nav class="nav">
+      	<ul id="menu">
+      		<% paginanombre.each do |titulo| %>	
+			<li>
+				<%= link_to titulo.name, titulo.routes %>
+			</li>
+			<%end%>
+		</ul>
+	  </nav>
       <nav class="nav pull-right">
-      	<% paginanombre.each do |titulo| %>	
-		<li>
-			<%= link_to titulo.name, titulo.routes %>
-		</li>
 	
-		<%end%>
-        <ul class="nav pull-right">	
           <li><%= link_to "Ayuda",    '#' %></li>
           <li><%= link_to "Log in", '#' %></li>
-        </ul>
+
       </nav>
     </div>
   </div>

@@ -1,5 +1,7 @@
 Divas::Application.routes.draw do
 
+  resources :galeries
+
   get "homes/index"
 
   resources :pages

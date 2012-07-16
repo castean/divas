@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @galery.name %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%= @galery.post %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @galery.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_galery_path(@galery) %> |
+<%= link_to 'Back', galeries_path %>

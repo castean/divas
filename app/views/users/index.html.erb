@@ -1,13 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="span8"></br>
-		<tittle class ="tittle">Divas</tittle>
+		<tittle class ="tittle">Divas
+			<%= link_to 'New User', new_user_path, :class => "btn"%>
+		</tittle>
 		<% @users.each do |user| %>
 		<table>
 		  <tr>
 		  	<h1 class="fn"></h1>
 		  	<div id="page-wrap">
-		  		<%= image_tag user.avatar.url(:medium), :id => "pic" %>
+		  		<span> <%= image_tag user.avatar.url(:medium), :id => "pic" %></span>
 			    <td><h3><%= user.nick %></h3></br>
 			    <div id="objective">
 	            	<p>
@@ -28,7 +30,7 @@
 			</tr>
 			<% end %>
 		</table><br />
-		<%= link_to 'New User', new_user_path, :class => "btn" %>
+		
 	</div>
     <div class="span4">
     	<%= render 'layouts/sponsor' %>

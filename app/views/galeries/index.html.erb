@@ -1,0 +1,27 @@
+<h1>Listing galeries</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Post</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @galeries.each do |galery| %>
+  <tr>
+    <td><%= galery.name %></td>
+    <td><%= galery.post %></td>
+    <td><%= galery.image %></td>
+    <td><%= link_to 'Show', galery %></td>
+    <td><%= link_to 'Edit', edit_galery_path(galery) %></td>
+    <td><%= link_to 'Destroy', galery, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Galery', new_galery_path %>
